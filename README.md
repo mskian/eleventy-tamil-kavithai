@@ -24,6 +24,7 @@ Eleventy Theme - <https://github.com/ar363/eleventy-stylus-blog-theme>  I made s
 - Meta tags
 - Schema Markup
 - Host it Freely on Netlify, Heroku, Vercel and Github Pages
+- Load inner pages instantly - <https://github.com/gijo-varghese/flying-pages>
 
 ## Developments
 
