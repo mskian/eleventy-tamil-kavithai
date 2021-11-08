@@ -37,7 +37,13 @@
   <meta property="og:image:height" content="630" />
 
   <link rel="shortcut icon" href="{{ '/icons/Icon-48.png' | url }}" type="image/png">
-  <link rel="stylesheet" href="{{ '/css/main.css' | url }}" media="all">
+  <!--<link rel="stylesheet" href="{{ '/css/main.css' | url }}" media="all">-->
+  {% set css %}
+  {% include "static/css/main.css" %}
+  {% endset %}
+  <style>
+  {{ css | cssmin | safe }}
+  </style>
 
   <link rel="apple-touch-icon" sizes="48x48" href="/icons/Icon-48.png">
   <link rel="apple-touch-icon" sizes="72x72" href="/icons/Icon-72.png">

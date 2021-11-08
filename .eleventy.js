@@ -3,6 +3,7 @@ const navigationPlugin = require('@11ty/eleventy-navigation')
 const rssPlugin = require('@11ty/eleventy-plugin-rss')
 const tinyHTML = require('@sardine/eleventy-plugin-tinyhtml')
 const safeLinks = require('@sardine/eleventy-plugin-external-links')
+const CleanCSS = require("clean-css")
 
 module.exports = (config) => {
   config.addPlugin(navigationPlugin);
@@ -21,6 +22,10 @@ module.exports = (config) => {
 
   config.addFilter("readableDate", dateObj => {
     return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat("dd LLL, yyyy");
+  });
+
+  config.addFilter("cssmin", function(code) {
+    return new CleanCSS({}).minify(code).styles;
   });
 
   config.addCollection("tagList", collection => {
