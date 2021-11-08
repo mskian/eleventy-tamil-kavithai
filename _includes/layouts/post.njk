@@ -1,0 +1,39 @@
+---
+layout: layouts/base.njk
+---
+
+{% include 'components/blogschema.njk' %}
+
+<div class="container-sm">
+  <h1>{{ title }}</h1>
+  <p class="card__date">{{ date | readableDate }}</p>
+  <hr>
+  {{ content | safe }}
+
+  <hr><br>
+  <!--<a href="{{ '/' | url }}">&larr; Back home</a>-->
+  <div class="page-nav">
+  {% if not hideTagsList %}
+    {% for tag in tags %}
+      {% if tag != 'post' %}
+       <p>Tags:
+        <a href="{{ '/tags/' | url }}{{ tag | slug }}">{{ tag }}</a>
+        </p>
+        {%- if not loop.last %}, {% endif %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+    {% if nextPost.url %}
+    <p>
+      Next: 
+      <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a>
+    </p>
+  {% endif %}
+  {% if prevPost.url %}
+    <p>
+      Previous: 
+      <a href="{{ prevPost.url }}">{{ prevPost.data.title }}</a>
+    </p>
+  {% endif %}
+  </div>
+</div>

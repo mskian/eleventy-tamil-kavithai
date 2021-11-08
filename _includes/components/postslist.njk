@@ -1,0 +1,21 @@
+<div class="card-grid">
+  {% for post in posts %}
+    <div class="card">
+      <h3 class="card__title">
+        <a href="{{ post.url | url }}">{{ post.data.title }}</a>
+      </h3>
+      <p class="card__date">{{ post.date | readableDate }}</p>
+      <br>
+      <div class="post-tags">
+        {% for tag in post.data.tags %}
+          {% if tag != 'post' %}
+            <span>Tag:</span> <a href="{{ '/tags/' | url }}{{ tag | slug }}">{{ tag }}</a>
+            {%- if not loop.last %}, {% endif %}
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  {% endfor %}
+</div>
+
+{% include 'components/homeschema.njk' %}

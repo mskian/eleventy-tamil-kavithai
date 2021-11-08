@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="{{ site.meta.lang }}">
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+  <meta name="theme-color" content="#ffffff">
+  <meta name="HandheldFriendly" content="True">
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="white-translucent">
+  <meta name="apple-mobile-web-app-title" content="San Kavithai">
+
+  <title>{% if title %}{{ title }}{% else %}{{ site.meta.title }}{% endif %}</title>
+  <meta name="description" content="{% if description %}{{ description }}{% else %}{{ site.meta.description }}{% endif %}">
+  <link rel="canonical" href="{{ site.meta.siteUrl }}{{ page.url }}" />
+
+  <meta property="og:site_name" content="{% if title %}{{ title }}{% else %}{{ site.meta.title }}{% endif %}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="{% if title %}{{ title }}{% else %}{{ site.meta.title }}{% endif %}" />
+  <meta property="og:description" content="{% if description %}{{ description }}{% else %}{{ site.meta.description }}{% endif %}" />
+  <meta property="og:url" content="{{ site.meta.siteUrl }}{{ page.url }}" />
+  <meta property="og:image" content="{{ site.meta.siteUrl }}/sankavithai.png" />
+  <meta property="article:publisher" content="https://www.facebook.com/santhoshveercom" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="{% if title %}{{ title }}{% else %}{{ site.meta.title }}{% endif %}" />
+  <meta name="twitter:description" content="{% if description %}{{ description }}{% else %}{{ site.meta.description }}{% endif %}" />
+  <meta name="twitter:url" content="{{ site.meta.siteUrl }}{{ page.url }}" />
+  <meta name="twitter:image" content="{{ site.meta.siteUrl }}/sankavithai.png" />
+  <meta name="twitter:site" content="@santhoshveerece" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <link rel="shortcut icon" href="{{ '/icons/Icon-48.png' | url }}" type="image/png">
+  <link rel="stylesheet" href="{{ '/css/main.css' | url }}" media="all">
+
+  <link rel="apple-touch-icon" sizes="48x48" href="/icons/Icon-48.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/icons/Icon-72.png">
+  <link rel="apple-touch-icon" sizes="96x96" href="/icons/Icon-96.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/icons/Icon-144.png">
+  <link rel="apple-touch-icon" sizes="192x192" href="/icons/Icon-192.png">
+  <link rel="apple-touch-icon" sizes="256x256" href="/icons/Icon-256.png">
+  <link rel="apple-touch-icon" sizes="512x512" href="/icons/Icon-512.png">
+
+ <link rel="sitemap" type="application/xml" href="/sitemap.xml"/>
+ <link rel="alternate" type="application/rss+xml" title="{{ site.meta.title }}" href="/atom.xml" />
+ <link rel="manifest" href="{{ '/manifest.json' | url }}">
+
+</head>
+<body>
+
+  {% include 'components/navbar.njk' %}
+  {{ content | safe }}
+  {% include 'components/footer.njk' %}
+
+  <script>
+    const ham = document.querySelector('.navbar__hamburger')
+    const menu = document.querySelector('.navbar__mobile-links')
+    const darkToggleButtons = document.querySelectorAll('.dark-toggle')
+
+    function changeDarkToggleBtnIcon () {
+      darkToggleButtons.forEach(btn => {
+        if (btn.querySelector('img').src.indexOf('/img/moon.svg') !== -1) {
+          btn.querySelector('img').src = "{{ '/img/sun.svg' | url }}"
+        } else {
+          btn.querySelector('img').src = "{{ '/img/moon.svg' | url }}"
+        }
+      })
+    }
+
+    if (
+      localStorage.prefsDark === 'true' || 
+      (
+        window.matchMedia && 
+        window.matchMedia('(prefers-color-scheme: dark)').matches && 
+        localStorage.prefsDark !== 'false')
+      ) {
+      document.body.classList.add('dark')
+      changeDarkToggleBtnIcon()
+    }
+
+    ham.addEventListener('click', () => {
+      menu.classList.toggle('navbar__mobile-links--open')
+
+      let prevState = JSON.parse(ham.getAttribute('aria-expanded'))
+      ham.setAttribute('aria-expanded', !prevState)
+    })
+
+    darkToggleButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        changeDarkToggleBtnIcon()
+
+        if (document.body.classList.contains('dark')) {
+          document.body.classList.remove('dark')
+          localStorage.prefsDark = 'false'
+        } else {
+          document.body.classList.add('dark')
+          localStorage.prefsDark = 'true'
+        }
+
+      })
+    })
+  </script>
+
+<script src="{{ '/js/pwa.js' | url }}"></script>
+<script src="{{ '/js/status.js' | url }}"></script>
+<script src="{{ '/js/flying-pages.min.js' | url }}" defer></script>
+<script>
+window.FPConfig = {
+    delay: 0,
+    ignoreKeywords: ["\/ghost", "\/ghost\/#", "\/p\/", "\/signup\/", "\/signin\/", "\/account\/", "#signout", "\/public\/members.js", "?action=signin", "?action=signup", "#", ".png", ".jpeg", ".jpg", ".gif", ".svg"],
+    maxRPS: 3,
+    hoverDelay: 50
+};
+</script>
+
+</body>
+</html>

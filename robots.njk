@@ -1,0 +1,36 @@
+---
+permalink: '/robots.txt'
+eleventyExcludeFromCollections: true
+---
+User-agent: *
+Disallow: /ghost/
+Disallow: /p/
+
+User-agent: NinjaBot
+Allow: /
+
+User-agent: Mediapartners-Google*
+Allow: /
+
+User-agent: Adsbot-Google
+Allow: /
+ 
+User-agent: Googlebot-Mobile
+Allow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: SemrushBot-SA
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: HTTrack
+Disallow: /
+
+Sitemap: {{ site.meta.siteUrl }}/sitemap.xml

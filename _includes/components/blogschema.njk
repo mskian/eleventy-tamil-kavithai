@@ -1,0 +1,47 @@
+<script type="application/ld+json">
+            {
+              "@context": "https://schema.org",
+              "@type": "Article",
+              "publisher": {
+                "@type": "Organization",
+                "name": "{{ site.meta.title }}",
+                "url": "{{ site.meta.siteUrl }}{{ page.url }}",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "{{ site.meta.siteUrl }}/icons/Icon-72.png",
+                  "width": 72,
+                  "height": 72
+                }
+              },
+              "author": {
+                "@type": "Person",
+                "name": "Editorial Staff",
+                "image": {
+                    "@type": "ImageObject",
+                    "url": "https://www.gravatar.com/avatar/a3425a2c334972ab5dde3c218307cbdd?s=250&d=mm&r=x",
+                    "width": 250,
+                    "height": 250
+                },
+                "sameAs": [
+                    "https://www.facebook.com/santhoshveercom",
+                    "https://twitter.com/santhoshveerece"
+                ]
+            },
+            "headline": "{{ title }}",
+              "url": "{{ site.meta.siteUrl }}{{ page.url }}",
+              "datePublished": "{{date | readableDate}}",
+              "dateModified": "{{date | readableDate}}",
+              "image": {
+                "@type": "ImageObject",
+                "url": "{{ site.meta.siteUrl }}/sankavithai.png",
+                "width": 1200,
+                "height": 630
+              },
+              "keywords": "{{ tags }}",
+              "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "{{ site.meta.siteUrl }}{{ page.url }}"
+              },
+              "description": "{{ description }}"
+            }
+</script>

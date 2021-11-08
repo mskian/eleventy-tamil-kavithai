@@ -1,0 +1,29 @@
+<script type="application/ld+json">
+    {
+    	"@context": "https://schema.org",
+    	"@type": "WebSite",
+    	"publisher": {
+    		"@type": "Organization",
+    		"name": "{{ site.meta.title }}",
+    		"url": "{{ site.meta.siteUrl }}{{ page.url }}",
+    		"logo": {
+    			"@type": "ImageObject",
+    			"url": "{{ site.meta.siteUrl }}/icons/Icon-72.png",
+    			"width": 72,
+    			"height": 72
+    		}
+    	},
+    	"url": "{{ site.meta.siteUrl }}{{ page.url }}",
+    	"image": {
+    		"@type": "ImageObject",
+    		"url": "{{ site.meta.siteUrl }}/sankavithai.png",
+    		"width": 1200,
+    		"height": 630
+    	},
+    	"mainEntityOfPage": {
+    		"@type": "WebPage",
+    		"@id": "{{ site.meta.siteUrl }}{{ page.url }}"
+    	},
+    	"description": "{{ site.meta.description }}"
+    }
+</script>
