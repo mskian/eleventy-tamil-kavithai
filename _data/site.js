@@ -4,6 +4,10 @@ module.exports = {
     description: "Collect the Favourite Tamil kavithai and Tamil Quotes From Tamil Writers Social Profile.",
     lang: "en",
     siteUrl: "https://status.tamilsms.blog",
+    facebook: "https://www.facebook.com/tamilsmsblog",
+    twitter: "https://twitter.com/tamilsmsblog",
+    twitteruser: "@tamilsmsblog",
+    instagram: "https://www.instagram.com/tamilsms/"
   },
   feed: {
     subtitle: "Tamil Status",

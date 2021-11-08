@@ -26,13 +26,14 @@
   <meta property="og:description" content="{% if description %}{{ description }}{% else %}{{ site.meta.description }}{% endif %}" />
   <meta property="og:url" content="{{ site.meta.siteUrl }}{{ page.url }}" />
   <meta property="og:image" content="{{ site.meta.siteUrl }}/sankavithai.png" />
-  <meta property="article:publisher" content="https://www.facebook.com/tamilsmsblog" />
+  <meta property="article:publisher" content="{{ site.meta.facebook }}" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="{% if title %}{{ title }}{% else %}{{ site.meta.title }}{% endif %}" />
   <meta name="twitter:description" content="{% if description %}{{ description }}{% else %}{{ site.meta.description }}{% endif %}" />
   <meta name="twitter:url" content="{{ site.meta.siteUrl }}{{ page.url }}" />
   <meta name="twitter:image" content="{{ site.meta.siteUrl }}/sankavithai.png" />
-  <meta name="twitter:site" content="@tamilsmsblog" />
+  <meta name="twitter:site" content="{{ site.meta.twitteruser }}" />
+  <meta name="twitter:creator" content="{{ site.meta.twitteruser }}" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
 
