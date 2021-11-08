@@ -2,9 +2,11 @@
 
 ![build-test](https://github.com/mskian/eleventy-tamil-kavithai/workflows/build-test/badge.svg)  
 
-படித்ததில் பிடித்தது - Collect My Favourite Tamil kavithai and Tamil Quotes Build using Eleventy and Markdown.  
+படித்ததில் பிடித்தது - Collect the Favourite Tamil kavithai and Tamil Quotes From Tamil Writers Social Profile - Build using Eleventy and Markdown.  
 
-Theme - <https://github.com/ar363/eleventy-stylus-blog-theme>  i made some Changes and Modification.
+Eleventy Theme - <https://github.com/ar363/eleventy-stylus-blog-theme>  I made some Changes and Modification.  
+
+> it's For My Personal Usage to Collect My Favourite Tamil Kavithai, Tamil Quotes and Status.  
 
 ## Features
 
@@ -14,6 +16,7 @@ Theme - <https://github.com/ar363/eleventy-stylus-blog-theme>  i made some Chang
 - Integrated with Eleventy's official [navigation plugin](https://www.11ty.dev/docs/plugins/navigation/)
 - Also generates Atom RSS Feed with Eleventy's official [RSS plugin](https://www.11ty.dev/docs/plugins/rss/)
 - Sitemap generation
+- Robots.txt
 - Non-post pages support (eg. About page, Contact page
 - Markdown Post content
 - PWA Support
@@ -48,6 +51,9 @@ yarn build
 - Update `manifest.json` and icons on `static` folder
 - Post content in `posts` folder
 - Create new page in `pages` folder
+- Update service worker file in `static` folder `service-worker.js`
+- Update Meta details in `/_includes/layouts/base.njk`
+- Update Schema Markup details in `/_includes/components`
 
 ## LICENSE ☑
 

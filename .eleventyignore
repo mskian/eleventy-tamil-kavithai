@@ -1,2 +1,5 @@
 README.md
 LICENSE
+deploy.sh
+.vercel
+renovate.json

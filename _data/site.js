@@ -1,15 +1,15 @@
 module.exports = {
   meta: {
     title: "படித்ததில் பிடித்தது",
-    description: "படித்ததில் பிடித்தது - Collect My Favourite Tamil kavithai and Tamil Quotes - Santhosh veer.",
+    description: "Collect the Favourite Tamil kavithai and Tamil Quotes From Tamil Writers Social Profile.",
     lang: "en",
-    siteUrl: "https://kavithai.santhoshveer.com",
+    siteUrl: "https://status.tamilsms.blog",
   },
   feed: {
-    subtitle: "San Kavithai",
+    subtitle: "Tamil Status",
     filename: "atom.xml",
     path: "/atom.xml",
-    id: "https://kavithai.santhoshveer.com/",
+    id: "https://status.tamilsms.blog/",
     authorName: "Santhosh Veer",
     authorEmail: "me@santhoshveer.com"
   },

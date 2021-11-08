@@ -2,6 +2,7 @@ node_modules
 .vscode
 _site
 .vercel
+deploy.sh
 
 # misc
 .DS_Store

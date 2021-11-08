@@ -9,7 +9,7 @@
       <div class="post-tags">
         {% for tag in post.data.tags %}
           {% if tag != 'post' %}
-            <span>Tag:</span> <a href="{{ '/tags/' | url }}{{ tag | slug }}">{{ tag }}</a>
+            <span>Tag:</span> <a href="{{ '/tags/' | url }}{{ tag | slug }}/">{{ tag }}</a>
             {%- if not loop.last %}, {% endif %}
           {% endif %}
         {% endfor %}

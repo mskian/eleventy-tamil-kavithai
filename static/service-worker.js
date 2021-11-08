@@ -1,47 +1,104 @@
-const CACHE_NAME = 'sw-cache-home';
-const toCache = [
-  '/',
-  '/index.html',
-  '/manifest.json',
-  '/js/pwa.js',
-  '/js/status.js',
-  '/css/main.css',
-  '/sankavithai.png'
-];
+'use strict';
 
-self.addEventListener('install', function(event) {
-  event.waitUntil(
-    caches.open(CACHE_NAME)
-      .then(function(cache) {
-        return cache.addAll(toCache)
-      })
-      .then(self.skipWaiting())
-  )
-})
+/**
+ * Service Worker of PWA
+ */
 
-self.addEventListener('fetch', function(event) {
-  event.respondWith(
-    fetch(event.request)
-      .catch(() => {
-        return caches.open(CACHE_NAME)
-          .then((cache) => {
-            return cache.match(event.request)
-          })
-      })
-  )
-})
+const cacheName = 'pwa-0.0.1';
+const startPage = 'https://status.tamilsms.blog';
+const offlinePage = 'https://status.tamilsms.blog/offline/';
+const filesToCache = [startPage, offlinePage, 'https://status.tamilsms.blog/icons/Icon-192.png'];
+const neverCacheUrls = [/\/admin/, /\/user-login/, /preview=true/];
 
-self.addEventListener('activate', function(event) {
-  event.waitUntil(
-    caches.keys()
-      .then((keyList) => {
-        return Promise.all(keyList.map((key) => {
-          if (key !== CACHE_NAME) {
-            console.log('[ServiceWorker] Removing old cache', key)
-            return caches.delete(key)
-          }
-        }))
-      })
-      .then(() => self.clients.claim())
-  )
-})
+// Install
+self.addEventListener('install', function(e) {
+    console.log('PWA service worker installation');
+    e.waitUntil(
+        caches.open(cacheName).then(function(cache) {
+            console.log('PWA service worker caching dependencies');
+            filesToCache.map(function(url) {
+                return cache.add(url).catch(function(reason) {
+                    return console.log('PWA: ' + String(reason) + ' ' + url);
+                });
+            });
+        })
+    );
+});
+
+// Activate
+self.addEventListener('activate', function(e) {
+    console.log('PWA service worker activation');
+    e.waitUntil(
+        caches.keys().then(function(keyList) {
+            return Promise.all(keyList.map(function(key) {
+                if (key !== cacheName) {
+                    console.log('PWA old cache removed', key);
+                    return caches.delete(key);
+                }
+            }));
+        })
+    );
+    return self.clients.claim();
+});
+
+// Fetch
+self.addEventListener('fetch', function(e) {
+
+    // Return if the current request url is in the never cache list
+    if (!neverCacheUrls.every(checkNeverCacheList, e.request.url)) {
+        console.log('PWA: Current request is excluded from cache.');
+        return;
+    }
+
+    // Return if request url protocal isn't http or https
+    if (!e.request.url.match(/^(http|https):\/\//i))
+        return;
+
+    // Return if request url is from an external domain.
+    if (new URL(e.request.url).origin !== location.origin)
+        return;
+
+    // For POST requests, do not use the cache. Serve offline page if offline.
+    if (e.request.method !== 'GET') {
+        e.respondWith(
+            fetch(e.request).catch(function() {
+                return caches.match(offlinePage);
+            })
+        );
+        return;
+    }
+
+    // Revving strategy
+    if (e.request.mode === 'navigate' && navigator.onLine) {
+        e.respondWith(
+            fetch(e.request).then(function(response) {
+                return caches.open(cacheName).then(function(cache) {
+                    cache.put(e.request, response.clone());
+                    return response;
+                });
+            })
+        );
+        return;
+    }
+
+    e.respondWith(
+        caches.match(e.request).then(function(response) {
+            return response || fetch(e.request).then(function(response) {
+                return caches.open(cacheName).then(function(cache) {
+                    cache.put(e.request, response.clone());
+                    return response;
+                });
+            });
+        }).catch(function() {
+            return caches.match(offlinePage);
+        })
+    );
+});
+
+// Check if current url is in the neverCacheUrls list
+function checkNeverCacheList(url) {
+    if (this.match(url)) {
+        return false;
+    }
+    return true;
+}
