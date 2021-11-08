@@ -10,3 +10,4 @@ README.md
 .gitignore
 test.js
 renovate.json
+scripts

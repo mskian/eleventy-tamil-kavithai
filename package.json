@@ -25,7 +25,8 @@
     "build:11ty": "eleventy",
     "watch:11ty": "eleventy --serve",
     "build": "yarn build:11ty",
-    "dev": "concurrently -n 11ty \"yarn watch:11ty\""
+    "dev": "concurrently -n 11ty \"yarn watch:11ty\"",
+    "newpost": "node scripts/post.js"
   },
   "dependencies": {}
 }

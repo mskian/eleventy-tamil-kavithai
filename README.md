@@ -48,6 +48,12 @@ yarn dev
 yarn build
 ```
 
+- Create New Post
+
+```sh
+yarn newpost
+```
+
 - Update site info's at - `_data/site.js`
 - Update `manifest.json` and icons on `static` folder
 - Post content in `posts` folder
