@@ -29,5 +29,7 @@
     "dev": "concurrently -n 11ty \"yarn watch:11ty\"",
     "newpost": "node scripts/post.js"
   },
-  "dependencies": {}
+  "dependencies": {
+    "terser": "^5.9.0"
+  }
 }

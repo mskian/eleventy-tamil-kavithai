@@ -4,6 +4,7 @@ const rssPlugin = require('@11ty/eleventy-plugin-rss')
 const tinyHTML = require('@sardine/eleventy-plugin-tinyhtml')
 const safeLinks = require('@sardine/eleventy-plugin-external-links')
 const CleanCSS = require("clean-css")
+const { minify } = require("terser")
 
 module.exports = (config) => {
   config.addPlugin(navigationPlugin);
@@ -26,6 +27,19 @@ module.exports = (config) => {
 
   config.addFilter("cssmin", function(code) {
     return new CleanCSS({}).minify(code).styles;
+  });
+
+  config.addNunjucksAsyncFilter("jsmin", async function (
+    code,
+    callback
+  ) {
+    try {
+      const minified = await minify(code);
+      callback(null, minified.code);
+    } catch (err) {
+      console.error("Terser error: ", err);
+      callback(null, code);
+    }
   });
 
   config.addCollection("tagList", collection => {

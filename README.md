@@ -26,6 +26,7 @@ Eleventy Theme - <https://github.com/ar363/eleventy-stylus-blog-theme>  I made s
 - Host it Freely on Netlify, Heroku, Vercel and Github Pages
 - Load inner pages instantly - <https://github.com/gijo-varghese/flying-pages>
 - Inline Minified CSS - <https://www.11ty.dev/docs/quicktips/inline-css/>
+- Inline Minified Javascript - <https://www.11ty.dev/docs/quicktips/inline-js/>
 
 ## Developments
 
