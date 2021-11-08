@@ -4,6 +4,7 @@ description: "நான் கடவுளை நம்புவதா அல்
 date: 2021-11-06
 tags:
   - Tamil Motivation
+copykavithai: false
 ---
 
 சில நேரங்களில்  

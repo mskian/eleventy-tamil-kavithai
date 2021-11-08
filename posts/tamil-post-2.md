@@ -4,6 +4,7 @@ description: "எனை ரசிக்க நினைத்தால் நீ
 date: 2021-11-06
 tags:
   - Kadhal Kavithai
+copykavithai: true
 ---
 
 எனை ரசிக்க  

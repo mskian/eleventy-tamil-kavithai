@@ -8,11 +8,26 @@ layout: layouts/base.njk
   <h1>{{ title }}</h1>
   <p class="card__date">{{ date | readableDate }}</p>
   <hr>
-  {{ content | safe }}
 
-  <hr><br>
+  {% if copykavithai %}
+  <div id="tamilquotes">
+  {{ content | safe }}
+  </div>
+  {% else %}
+  {{ content | safe }}
+  {% endif %}
+
+  <hr>
+  <br>
+
   <!--<a href="{{ '/' | url }}">&larr; Back home</a>-->
+
   <div class="page-nav">
+
+  {% if copykavithai %}
+  {% clipboard 'Copy Kavithai' %}
+  {% endif %}
+
   {% if not hideTagsList %}
     {% for tag in tags %}
       {% if tag != 'post' %}
@@ -23,6 +38,7 @@ layout: layouts/base.njk
       {% endif %}
     {% endfor %}
   {% endif %}
+
     {% if nextPost.url %}
     <p>
       Next: 
@@ -35,5 +51,6 @@ layout: layouts/base.njk
       <a href="{{ prevPost.url }}">{{ prevPost.data.title }}</a>
     </p>
   {% endif %}
+
   </div>
 </div>

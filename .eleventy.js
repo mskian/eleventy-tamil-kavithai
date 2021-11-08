@@ -11,6 +11,7 @@ module.exports = (config) => {
   config.addPlugin(rssPlugin);
   config.addPlugin(tinyHTML);
   config.addPlugin(safeLinks);
+  config.addPlugin(require('./plugins'));
 
   config.addPassthroughCopy('static');
   config.addPassthroughCopy({ static: "/" })

@@ -80,5 +80,21 @@ window.FPConfig = {
 };
 </script>
 
+{% if copykavithai %}
+<script src="{{ '/js/clipboard.min.js' | url }}"></script>
+<script>
+new ClipboardJS('.btn');
+if (document.getElementById("btncopy") != null) {
+    document.getElementById("btncopy").addEventListener('click', e => {
+        console.log('copied');
+        document.getElementById("copied").innerHTML = '<p class="text-center">kavithai Copied</p>';
+        setTimeout(() => {
+        document.getElementById("copied").style.display = "none";
+        }, 1000);
+    })
+}
+</script>
+{% endif %}
+
 </body>
 </html>
