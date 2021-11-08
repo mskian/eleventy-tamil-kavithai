@@ -18,7 +18,7 @@ const basename = "tamil-kavithai-" + random_id
 const contents = `---
 title: ""
 description: ""
-date: "${formattedDate}"
+date: ${formattedDate}
 tags:
   - ""
 copykavithai: false

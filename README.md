@@ -27,7 +27,8 @@ Eleventy Theme - <https://github.com/ar363/eleventy-stylus-blog-theme>  I made s
 - Load inner pages instantly - <https://github.com/gijo-varghese/flying-pages>
 - Inline Minified CSS - <https://www.11ty.dev/docs/quicktips/inline-css/>
 - Inline Minified Javascript - <https://www.11ty.dev/docs/quicktips/inline-js/>
-- Custom Clipboard Plugin - built using `clipboard.js`  
+- Custom Clipboard Plugin - built using `clipboard.js`
+- Add post via shortcode - <https://www.11ty.dev/docs/plugins/image/#use-this-in-your-templates>  
 
 ## Developments
 
@@ -65,6 +66,11 @@ yarn newpost
 - Update Meta details in `/_includes/layouts/base.njk`
 - Update Schema Markup details in `/_includes/components`
 - Copy kavithai Button - Add this on `copykavithai: true` or `copykavithai: false` Markdown Post File - `true - Enable Copy Button` - `false - Disable Copy Button`
+- Add image via Shortcode - put your post images on `images` folder add image shortcode on post (it will automatically optimze images in different sizes - refer `.eleventy.js` file)
+
+```sh
+{% image "example-image.png", "Example Alt Text" %}
+```
 
 ## LICENSE ☑
 
