@@ -1,4 +1,4 @@
-# Eleventy Tamil Kavithai
+# Eleventy(11ty) Tamil Kavithai
 
 ![build-test](https://github.com/mskian/eleventy-tamil-kavithai/workflows/build-test/badge.svg)  
 
@@ -10,7 +10,9 @@ Eleventy Theme - <https://github.com/ar363/eleventy-stylus-blog-theme>  I made s
 
 ## Features
 
+- 11ty
 - 100% Lighthouse scores
+- Speed Optimized
 - Toggleable dark theme (PS. theme preference is also stored in `localStorage`)
 - Tags as taxonomy
 - Integrated with Eleventy's official [navigation plugin](https://www.11ty.dev/docs/plugins/navigation/)
@@ -30,7 +32,7 @@ Eleventy Theme - <https://github.com/ar363/eleventy-stylus-blog-theme>  I made s
 - Custom Clipboard Plugin - built using `clipboard.js`
 - Add post via shortcode - <https://www.11ty.dev/docs/plugins/image/#use-this-in-your-templates>  
 
-## Developments
+## Development
 
 - Clone or Download the Repo
 
@@ -66,11 +68,16 @@ yarn newpost
 - Update Meta details in `/_includes/layouts/base.njk`
 - Update Schema Markup details in `/_includes/components`
 - Copy kavithai Button - Add this on `copykavithai: true` or `copykavithai: false` Markdown Post File - `true - Enable Copy Button` - `false - Disable Copy Button`
-- Add image via Shortcode - put your post images on `images` folder add image shortcode on post (it will automatically optimze images in different sizes - refer `.eleventy.js` file)
+- Add image via Shortcode - put your post images on `images` folder add image shortcode on post (it will automatically optimze images in different sizes - refer `.eleventy.js` file) - images are serve via webp format
 
 ```sh
 {% image "example-image.png", "Example Alt Text" %}
 ```
+
+## Reference
+
+- 11ty Development - <https://jec.fyi/blog>
+- Guides - <https://11ty.rocks/>
 
 ## LICENSE ☑
 
