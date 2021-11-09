@@ -4,4 +4,8 @@ module.exports = function(eleventyConfig) {
         'clipboard',
         require('./clipboard')
     );
+    eleventyConfig.addShortcode(
+        'download',
+        require('./download')
+    );
 };

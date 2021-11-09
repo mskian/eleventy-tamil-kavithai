@@ -30,7 +30,8 @@ Eleventy Theme - <https://github.com/ar363/eleventy-stylus-blog-theme>  I made s
 - Inline Minified CSS - <https://www.11ty.dev/docs/quicktips/inline-css/>
 - Inline Minified Javascript - <https://www.11ty.dev/docs/quicktips/inline-js/>
 - Custom Clipboard Plugin - built using `clipboard.js`
-- Add post via shortcode - <https://www.11ty.dev/docs/plugins/image/#use-this-in-your-templates>  
+- Add post via shortcode - <https://www.11ty.dev/docs/plugins/image/#use-this-in-your-templates>
+- Custom Image downloader Shortcode Plugin  
 
 ## Development
 
@@ -72,6 +73,12 @@ yarn newpost
 
 ```sh
 {% image "example-image.png", "Example Alt Text" %}
+```
+
+- image downloader Shortcode - image must be in `images` folder it will fetch the optimized image to the users - just add the image file name
+
+```sh
+{% download "example-image" %}
 ```
 
 ## Reference
