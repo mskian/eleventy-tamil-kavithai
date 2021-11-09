@@ -26,5 +26,5 @@ copykavithai: false
 `
 
 fs.writeFile(`${blogdir}/${basename}.mdx`, contents, () =>
-  console.log(`✔ Created ${blogdir}/${basename}.mdx`)
+  console.log(`✔ Created ${blogdir}/${basename}.md`)
 )
