@@ -81,7 +81,7 @@ window.FPConfig = {
 };
 </script>
 
-{% if copykavithai %}
+{% if copykavithai or copytext %}
 <script src="{{ '/js/clipboard.min.js' | url }}"></script>
 <script>
 new ClipboardJS('.btn');

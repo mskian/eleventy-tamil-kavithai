@@ -31,7 +31,8 @@ Eleventy Theme - <https://github.com/ar363/eleventy-stylus-blog-theme>  I made s
 - Inline Minified Javascript - <https://www.11ty.dev/docs/quicktips/inline-js/>
 - Custom Clipboard Plugin - built using `clipboard.js`
 - Add post via shortcode - <https://www.11ty.dev/docs/plugins/image/#use-this-in-your-templates>
-- Custom Image downloader Shortcode Plugin  
+- Custom Image downloader Shortcode Plugin
+- Custom Manual Copy Text Button Shortcode Plugin  
 
 ## Development
 
@@ -80,6 +81,21 @@ yarn newpost
 ```sh
 {% download "example-image" %}
 ```
+
+- Manual Copy Text Button Shortcode - add `copytext: true` in Markdown Post file
+
+```md
+<div id="getkavithai">
+Example Post content <br>
+Just add this format on your Markdown File.
+</div>
+
+{% copytext "📋 Copy Above Text" %}
+```
+
+### Note
+
+Before using this theme Replace/edit Everything which I added because it was the source code of my production site and a few plugins are written for personal usage if you want to use it check `plugins` folder and Markdown Files about the plugin usage
 
 ## Reference
 

@@ -8,4 +8,8 @@ module.exports = function(eleventyConfig) {
         'download',
         require('./download')
     );
+    eleventyConfig.addShortcode(
+        'copytext',
+        require('./copytext')
+    );
 };
