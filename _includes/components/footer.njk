@@ -4,5 +4,12 @@
 <button class="btn purple" id="installPWA" onclick="installPWA()">Install App</button>
 </div>
 <br>
-<P class="center">Connect - <a href="{{ site.meta.facebook }}">Facebook</a> | <a href="{{ site.meta.instagram }}">instagram</a> | <a href="{{ site.meta.twitter }}">Twitter</a> <br> App is currently: <b class="page-status">online</b> - Last Build: {{ helpers.Buildtime() }}<br>Built using Eleventy static site generator - PWA Support.<br>&copy; {{ helpers.currentYear() }} - {{ site.meta.title }} </p>
+<P class="center text-center">
+<a href="{{ site.meta.facebook }}"><img loading="lazy" decoding="async" alt="Facebook" src="{{ '/img/facebook.png' | url }}" width="30" height="30"></a>&nbsp;
+<a href="{{ site.meta.twitter }}"><img loading="lazy" decoding="async" alt="twitter" src="{{ '/img/twitter.png' | url }}" width="30" height="30"></a>&nbsp;
+<a href="{{ site.meta.instagram }}"><img loading="lazy" decoding="async" alt="instagam" src="{{ '/img/instagram.png' | url }}" width="30" height="30"></a>&nbsp;
+<a href="{{ site.meta.telegram }}"><img loading="lazy" decoding="async" alt="telegram" src="{{ '/img/telegram.png' | url }}" width="30" height="30"></a>
 <br>
+App is currently: <b class="page-status">online</b> - Last Build: {{ helpers.Buildtime() }}<br>
+Built using Eleventy static site generator - PWA Support.<br>
+&copy; {{ helpers.currentYear() }} - {{ site.meta.title }}</p><br>

@@ -7,7 +7,8 @@ module.exports = {
     facebook: "https://www.facebook.com/tamilsmsblog",
     twitter: "https://twitter.com/tamilsmsblog",
     twitteruser: "@tamilsmsblog",
-    instagram: "https://www.instagram.com/tamilsms/"
+    instagram: "https://www.instagram.com/tamilsms/",
+    telegram: "https://t.me/tamilsmsblog"
   },
   feed: {
     subtitle: "Tamil Status",

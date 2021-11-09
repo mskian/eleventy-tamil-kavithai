@@ -109,8 +109,8 @@ body.dark {
   text-decoration: none;
 }
 img {
-  width: 100%;
-  height: auto;;
+  max-width: 100%;
+  max-height: 100%;
 }
 h1,
 h2,
@@ -213,11 +213,15 @@ hr {
   padding: 1rem;
   max-width: 500px;
 }
+.container-sm img {
+    width: 100%;
+    height: auto;
+}
 .center {
   margin: auto;
   width: 80%;
   border: 2px solid rgb(125, 55, 238);
-  padding: 10px;
+  padding: 25px;
   font-size: 14px;
   -moz-osx-font-smoothing: grayscale;
  -webkit-font-smoothing: antialiased !important;
@@ -502,4 +506,7 @@ border-radius: 50em !important;
 }
 .purple {
   background-color: #564f8a;
+}
+.social-profile {
+  letter-spacing: 5px;
 }
