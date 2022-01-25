@@ -135,10 +135,10 @@
   dependencies:
     linkedom "^0.13.0"
 
-"@sardine/eleventy-plugin-tinyhtml@^0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@sardine/eleventy-plugin-tinyhtml/-/eleventy-plugin-tinyhtml-0.1.0.tgz#674b7c621f2b197357bac376fe216569b1e49291"
-  integrity sha512-6F1MT3l5V4jGwg8Lzj/sCFGjwqeR1sxzdTd1JivX/cfviuUKicIxiPZAYNfWKLpV0IPkOKlkDo+uaVaYZhBwgg==
+"@sardine/eleventy-plugin-tinyhtml@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@sardine/eleventy-plugin-tinyhtml/-/eleventy-plugin-tinyhtml-0.2.0.tgz#7808c28559544657b26b10f4dd3601645a84a093"
+  integrity sha512-OJZTms3AWhbe5KK4zleA2HjdA6vjoLKo6iDVQZR6PxLLUttvArm2Vl/I4qhIh92TY/d59NoA34tFEQYnYDrIng==
   dependencies:
     html-minifier "^4.0.0"
 
