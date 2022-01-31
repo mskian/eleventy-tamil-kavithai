@@ -19,7 +19,7 @@
     "@11ty/eleventy-plugin-rss": "^1.1.2",
     "@sardine/eleventy-plugin-external-links": "^1.4.0",
     "@sardine/eleventy-plugin-tinyhtml": "^0.2.0",
-    "clean-css": "^5.2.3",
+    "clean-css": "^5.2.4",
     "concurrently": "^7.0.0",
     "luxon": "^2.3.0",
     "outdent": "^0.8.0"
