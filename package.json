@@ -21,7 +21,7 @@
     "@sardine/eleventy-plugin-tinyhtml": "^0.2.0",
     "clean-css": "^5.3.1",
     "concurrently": "^7.3.0",
-    "luxon": "^3.0.1",
+    "luxon": "^3.0.3",
     "outdent": "^0.8.0"
   },
   "scripts": {
