@@ -28,6 +28,16 @@ Mobile Wallpaper and Lock Screen Quotes and Kavithai image - **Resolution : 1080
 
 &nbsp;
 
+{% image "rn-11-ta-wallpaper-4.png", "Quotes and Kavithai Mobile Wallpapers" %}  
+{% download "rn-11-ta-wallpaper-4" %}
+
+&nbsp;
+
+{% image "rn-11-ta-wallpaper-5.png", "Quotes and Kavithai Mobile Wallpapers" %}  
+{% download "rn-11-ta-wallpaper-5" %}
+
+&nbsp;
+
 {% image "rn-11-en-wallpaper-1.png", "Quotes and Kavithai Mobile Wallpapers" %}  
 {% download "rn-11-en-wallpaper-1" %}  
 
