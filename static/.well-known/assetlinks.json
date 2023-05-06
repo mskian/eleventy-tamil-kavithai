@@ -1,0 +1,5 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target" : { "namespace": "android_app", "package_name": "blog.tamilsms.status",
+               "sha256_cert_fingerprints": ["6D:99:3F:56:9E:5B:D6:05:4F:E9:4C:5E:1E:8F:6C:50:66:79:FD:FB:6E:AC:36:DA:E3:E7:2D:91:07:28:9A:D9"] }
+}]
