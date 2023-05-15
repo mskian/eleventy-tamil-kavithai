@@ -1,7 +1,7 @@
 module.exports = {
   meta: {
-    title: "படித்ததில் பிடித்தது",
-    description: "Collect the Favourite Tamil kavithai and Tamil Quotes From Tamil Writers Social Profile.",
+    title: "Tamil Status - படித்ததில் பிடித்தது",
+    description: "Tamil SMS Blog - Here I Collect the Favourite Tamil Kavithai, Tamil Quotes Tamil Status, and Kadhal Kavithai From Tamil Writer's Online Social Profile.",
     lang: "en",
     siteUrl: "https://status.tamilsms.blog",
     facebook: "https://www.facebook.com/tamilsmsblog",
