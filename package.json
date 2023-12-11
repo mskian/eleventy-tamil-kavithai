@@ -32,6 +32,6 @@
     "newpost": "node scripts/post.js"
   },
   "dependencies": {
-    "terser": "^5.25.0"
+    "terser": "^5.26.0"
   }
 }
