@@ -35,6 +35,6 @@
     "sharp": "0.34.2"
   },
   "dependencies": {
-    "terser": "^5.43.0"
+    "terser": "^5.43.1"
   }
 }
